@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Detection System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">🧠 BrainTumor AI</div>
+    <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#prediction">Prediction</a></li>
+        <li><a href="#dataset">Dataset</a></li>
+        <li><a href="#accuracy">Accuracy</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="section hero-section">
+    <h1>AI Powered Brain Tumor Detection</h1>
+    <p>Deep Learning model using CNN + VGG16</p>
+</section>
+
+<section id="prediction" class="section">
+    <h2>Brain Tumor Prediction</h2>
+    <div class="card">
+        <form id="uploadForm">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="age" placeholder="Enter Age" required>
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+</section>
+
+<section id="dataset" class="section">
+    <h2>Dataset Information</h2>
+    <div class="info-grid">
+        <div class="info-card">Kaggle MRI Dataset</div>
+        <div class="info-card">Classes: Tumor / No Tumor</div>
+        <div class="info-card">Image Size: 224x224</div>
+        <div class="info-card">Preprocessing: Rescaling</div>
+    </div>
+</section>
+
+<section id="accuracy" class="section">
+    <h2>Model Performance</h2>
+    <div class="info-grid">
+        <div class="metric-card">Training Accuracy: 98%</div>
+        <div class="metric-card">Validation Accuracy: 96%</div>
+        <div class="metric-card">Model: VGG16</div>
+        <div class="metric-card">Optimizer: Adam</div>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+
+
+
+</body>
+</html>
